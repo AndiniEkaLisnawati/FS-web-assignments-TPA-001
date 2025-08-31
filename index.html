@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twingky-pie's</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andini — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Andini — front-end developer crafting delightful, performant web experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">A</span><span class="brand-word">ndini</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="site-nav" class="site-nav" data-js="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section class="hero section">
+      <div class="container grid-2">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Front-End Developer</p>
+          <h1 class="title-xl">
+            Crafting interfaces that feel <span class="gradient-text">alive</span>.
+          </h1>
+          <p class="lead">
+            I build fast, accessible, and animated web experiences—no frameworks necessary.
+            <span class="typing" data-words='["Clean code.","Micro-interactions.","Responsive layouts.","Sensible UX."]'></span>
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="projects.html">See Projects</a>
+            <a class="btn ghost" href="about.html">About Me</a>
+          </div>
+          <ul class="badges">
+            <li class="badge">HTML</li>
+            <li class="badge">CSS / Grid / Flex</li>
+            <li class="badge">JavaScript</li>
+            <li class="badge">Accessibility</li>
+          </ul>
+        </div>
+        <div class="hero-art reveal">
+          <div class="orb orb-1" aria-hidden="true"></div>
+          <div class="orb orb-2" aria-hidden="true"></div>
+          <div class="floating-card">
+            <img src="assets/preview-1.png" alt="UI preview" onerror="this.style.display='none'">
+            <div class="glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title-l center">Featured Projects</h2>
+        <div class="projects-grid slider" data-js="slider">
+          <button class="slider-btn prev" aria-label="Previous">&#10094;</button>
+          <div class="slides">
+            <article class="card project reveal hover-rise">
+              <div class="card-media skeleton"></div>
+              <div class="card-body">
+                <h3>Scrappis</h3>
+                <p>Lightweight web scraping dashboard with clean UI and empty-state animations.</p>
+                <a class="chip" href="#" aria-disabled="true">Demo</a>
+              </div>
+            </article>
+            <article class="card project reveal hover-rise">
+              <div class="card-media skeleton"></div>
+              <div class="card-body">
+                <h3>Bookshelf API</h3>
+                <p>Node.js (native http) API with RESTful endpoints and neat docs.</p>
+                <a class="chip" href="#" aria-disabled="true">Repo</a>
+              </div>
+            </article>
+            <article class="card project reveal hover-rise">
+              <div class="card-media skeleton"></div>
+              <div class="card-body">
+                <h3>TrashToCash</h3>
+                <p>Eco challenge platform UI with role-based dashboard mock.</p>
+                <a class="chip" href="#" aria-disabled="true">Case Study</a>
+              </div>
+            </article>
+          </div>
+          <button class="slider-btn next" aria-label="Next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container grid-3">
+        <div class="stat reveal">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Production-ready pages</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Responsive layout</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num">A11y</div>
+          <div class="stat-label">Keyboard & contrast</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Andini. All rights reserved.</p>
+      <div class="links">
+        <a href="https://github.com/AndiniEkaLisnawati" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/andinn" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
